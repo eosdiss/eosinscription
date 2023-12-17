@@ -19,7 +19,8 @@ const formSchema = z.object({
     message: "Inscription must be at least 2 characters.",
   }),
 });
-const InscriptionForm = () => {
+
+const ReceivedAddress = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -34,7 +35,7 @@ const InscriptionForm = () => {
   return (
     <div>
       <div className="mb-1 text-lg font-medium tracking-tight">
-        Inscription:
+        Received address:
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -44,14 +45,8 @@ const InscriptionForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input
-                    placeholder='data:, {"p":"asc-20","op":"mint","tick":"aval","amt":"1000000"}'
-                    {...field}
-                  />
+                  <Input placeholder="0xC0309...fE001" {...field} />
                 </FormControl>
-                <FormDescription>
-                  ⚠️ Make sure to fill a correct inscription.
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -62,4 +57,4 @@ const InscriptionForm = () => {
   );
 };
 
-export default InscriptionForm;
+export default ReceivedAddress;

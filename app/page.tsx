@@ -18,6 +18,7 @@ import { publicProvider } from "wagmi/providers/public";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import ChainForm from "./_components/chain-form";
 import InscriptionForm from "./_components/inscription-form";
+import ReceivedAddress from "./_components/received-address";
 
 // const privateKeys = [];
 // const signatureProvider = new JsSignatureProvider(privateKeys);
@@ -53,8 +54,8 @@ const App = () => {
       <WagmiConfig config={wagmiConfig}>
         <RainbowKitProvider chains={chains}>
           {/* navbar */}
-          <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-            <h2 className="text-2xl font-bold text-white">EOSInscription 🌼</h2>
+          <nav className="flex items-center justify-between flex-wrap bg-teal-500 px-12 py-6">
+            <h2 className="text-3xl font-bold text-white">EOSInscription 🌼</h2>
             <ConnectButton />
           </nav>
 
@@ -74,6 +75,7 @@ const App = () => {
               <div className="flex flex-col gap-6">
                 <ChainForm />
                 <InscriptionForm />
+                <ReceivedAddress />
               </div>
             </div>
           </main>

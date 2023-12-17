@@ -38,7 +38,9 @@ const ChainForm = () => {
 
   return (
     <div>
-      <div className="mb-1 text-lg font-medium">Select EOS EVM below:</div>
+      <div className="mb-1 text-lg font-medium tracking-tight">
+        Select EOS EVM below:
+      </div>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
