@@ -19,6 +19,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import ChainForm from "./_components/chain-form";
 import InscriptionForm from "./_components/inscription-form";
 import ReceivedAddress from "./_components/received-address";
+import MintAmount from "./_components/mint-amount";
 
 // const privateKeys = [];
 // const signatureProvider = new JsSignatureProvider(privateKeys);
@@ -76,6 +77,7 @@ const App = () => {
                 <ChainForm />
                 <InscriptionForm />
                 <ReceivedAddress />
+                <MintAmount />
               </div>
             </div>
           </main>
